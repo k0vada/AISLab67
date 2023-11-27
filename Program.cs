@@ -23,7 +23,7 @@ namespace AISLab67
             catch (Exception e)
             {
                 Console.WriteLine(e.Message);
-                Console.WriteLine("Для завершения нажмитие на любую кнопку");
+                Console.WriteLine("Для завершения нажмитие на любую кнопку.");
                 Console.ReadKey();
                 return;
             }
@@ -36,7 +36,7 @@ namespace AISLab67
                 dataController.Insert(school);
             }
 
-            Console.WriteLine("Для завершения нажмитие на любую кнопку");
+            Console.WriteLine("Для завершения нажмитие на любую кнопку.");
             Console.ReadKey();
         }
     }
