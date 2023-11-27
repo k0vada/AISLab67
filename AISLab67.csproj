@@ -58,14 +58,33 @@
   <ItemGroup>
     <Compile Include="DataBaseContext.cs" />
     <Compile Include="DataController.cs" />
+    <Compile Include="Migrations\202311270608203_InitialCreate.cs" />
+    <Compile Include="Migrations\202311270608203_InitialCreate.designer.cs">
+      <DependentUpon>202311270608203_InitialCreate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202311271123437_AddDirectionTable.cs" />
+    <Compile Include="Migrations\202311271123437_AddDirectionTable.designer.cs">
+      <DependentUpon>202311271123437_AddDirectionTable.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Model\Direction.cs" />
     <Compile Include="Model\School.cs" />
     <Compile Include="Parser.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewController.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202311270608203_InitialCreate.resx">
+      <DependentUpon>202311270608203_InitialCreate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202311271123437_AddDirectionTable.resx">
+      <DependentUpon>202311271123437_AddDirectionTable.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

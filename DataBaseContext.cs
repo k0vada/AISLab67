@@ -14,10 +14,14 @@ namespace AISLab67
         {
         }
         public DbSet<Model.School> Schools { get; set; }
+        public DbSet<Model.Direction> Directions { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
             modelBuilder.Entity<Model.School>().Property(p => p.Id).HasDatabaseGeneratedOption(DatabaseGeneratedOption.Identity);
+            modelBuilder.Entity<Model.School>().HasMany(p => p.Directions).WithOptional(p => p.School).HasForeignKey(p => p.SchoolId);
+            modelBuilder.Entity<Model.Direction>().Property(p => p.Id).HasMaxLength(8);
+            modelBuilder.Entity<Model.Direction>().ToTable("Directions");
         }
     }
 }

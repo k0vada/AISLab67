@@ -34,7 +34,7 @@ namespace AISLab67
                 string phone = school.SelectNodes(".//div[@class='school-contact__item']/a").First().InnerText;
                 string campus = school.SelectNodes(".//div[@class='school-contact__item']/address/strong").First().InnerText.Trim();
                 string address = school.SelectNodes(".//div[@class='school-contact__item']/address").First().InnerText.Replace(campus, "").Trim();
-                address = address.Trim();
+               // address = address.Trim();
                 Model.School School = new Model.School
                 {
                     Address = address,
