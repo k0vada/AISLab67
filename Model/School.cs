@@ -23,6 +23,5 @@ namespace AISLab67.Model
         {
             Directions = new List<Direction>();
         }
-        
     }
 }

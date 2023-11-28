@@ -46,7 +46,6 @@ namespace AISLab67
                 Console.WriteLine("Ошибка: " + ex.Message);
             }
         }
-
         public void PrintAllDirections()
         {
             Console.WriteLine("\n\nПеречень направлений подготовки:\n");
